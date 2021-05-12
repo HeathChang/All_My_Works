@@ -69,16 +69,18 @@ for a in news.select("a", attrs={"class": "search_result_row ds_collapse_flag  a
     print("게임 출시일: ", inDate)
 
     # 게임 가격
-    ainPrice = soup.find(
-        "div", attrs={"game_area_purchase_game_wrapper"})
-    # wrapper class가 존재하지 않는 경우,  바로 price로 이동
+    ainPrice = soup.select_one(
+        "div.game_purchase_action > div > div.discount_block.game_purchase_discount > div.discount_prices > div.discount_original_price")
     if ainPrice is None:
-        ainPrice = soup.find(
-            "div", attrs={"game_purchase_price price"})
-    # wrapper class가 존재하는 경우, wrapper class에서, price 로 이동   (wrapper class 안에 있는 price 참고)
+        ainPrice = soup.select_one(
+            "div.game_area_purchase_game_wrapper > div >  div.game_purchase_action > div >  div.game_purchase_price.price")
+    if ainPrice is None:
+        ainPrice = soup.select_one(
+            "#game_area_purchase > div.game_area_purchase_game > div.game_purchase_action > div > div.game_purchase_price.price")
+    if ainPrice is None:
+        inPrice = "가격확인이 불가하거나 이미 소지한 게임입니다."
     else:
-        ainPrice = ainPrice.find(
-            "div", attrs={"game_purchase_price price"})
+        inPrice = ainPrice.get_text().strip()
 
     if ainPrice is None:
         inPrice = "가격확인 불가"
