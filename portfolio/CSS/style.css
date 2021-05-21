@@ -3,7 +3,7 @@
   height: 100px;
 }
 
-root {
+:root {
   /* Color */
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
@@ -34,4 +34,34 @@ root {
 /* Universal Tags */
 * {
   box-sizing: border-box;
+}
+
+/* Typography */
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 8px;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 8px;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0px;
 }
