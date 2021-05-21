@@ -9,7 +9,7 @@
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-blue: #0000ff;
-  --color-sky-blue: #3498db;
+  --color-sky-blue: #34b3f3;
   --color-dark-blue: #00008b;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
@@ -47,16 +47,27 @@ body {
   cursor: default;
 }
 
-/* anchor */
 a {
   text-decoration: none;
   color: var(--color-white);
 }
-/* ul */
+
 ul {
   list-style: none;
   padding-left: 0;
 }
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* Typography */
 
 h1 {
@@ -87,7 +98,7 @@ p {
   margin: 4px 0px;
 }
 
-/* Navbar */
+/*//////// Navbar ///////*/
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -95,14 +106,28 @@ p {
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  border: var(--color-black) solid 0.05px;
 }
 
 .navbar__menu {
   display: flex;
+  /* 세로 정렬 */
 }
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
+}
+.icon {
+  width: 56px;
+  height: 50px;
+  top: -10px;
+  object-fit: scale-down;
+}
+
+.navbar__logo #navbar__myName {
+  position: relative;
+  top: -10px;
+  right: -10px;
 }
 .navbar__menu__item {
   padding: 8px 12px;
@@ -113,9 +138,42 @@ p {
 
 .navbar__menu__item.active {
   border: 1px solid var(--color-dark-white);
+  margin: auto;
 }
 
 .navbar__menu__item:hover {
   background-color: var(--color-blue);
+  border-radius: 4px;
+}
+
+/*/ /////// Home ///////*/
+#home {
+  background: url("../imgs/homeBackground.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+.home__avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid var(--color-black);
+}
+.home__title {
+  color: var(--color-white);
+  text-shadow: -2px 0 var(--color-black), 0 2px var(--color-black),
+    2px 0 var(--color-black), 0 -2px var(--color-black);
+}
+.home__description {
+  color: var(--color-white);
+  text-shadow: -1px 0 var(--color-black), 0 1px var(--color-black),
+    1px 0 var(--color-black), 0 -1px var(--color-black);
+}
+.home__contact {
+  color: var(--color-black);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-black);
   border-radius: 4px;
 }
