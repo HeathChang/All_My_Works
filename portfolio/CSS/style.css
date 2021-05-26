@@ -33,6 +33,9 @@
 
   /* Size */
   --size-border-radius: 4px;
+
+  /* Animation */
+  --animation--duration: 300ms;
 }
 
 /* Universal Tags */
@@ -176,4 +179,90 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-black);
   border-radius: 4px;
+}
+
+/* About */
+.section {
+  padding: 50px;
+  text-align: center;
+  /* 중간 정렬 */
+  max-width: 1200px;
+  /* margin이 오른쪽에만 들어간 경우 margin: auto;*/
+  margin: auto;
+}
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  /* 나란히 정렬 */
+  margin: 80px 0;
+}
+.major_icon {
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  line-height: 170px;
+  /* line-height 을 높이만큼 주면, 중간에 옴 */
+  margin: auto;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  /* 동그란 사진 */
+  margin-bottom: 16px;
+}
+.major_icon:hover i {
+  color: var(--color-dark-blue);
+  transform: rotate(15deg) scale(1.1);
+  /* transform */
+}
+.major_icon i {
+  transition: all var(--animation--duration) ease;
+}
+.major_title,
+.major_description {
+  color: var(--color-dark-grey);
+}
+.major_description {
+  font-size: var(--font-small);
+}
+.univ__logo,
+.work__logo {
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--color-blue);
+}
+.about_place {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.univ,
+.work {
+  display: flex;
+  align-items: center;
+}
+
+.univ_description,
+.work_description {
+  margin: 0 16px;
+  text-align: left;
+}
+.univ__name,
+.univ__period,
+.univ__major,
+.work__name,
+.work__period,
+.work__major {
+  color: var(--color-grey);
+}
+
+.univ__name,
+.univ__major,
+.work__name,
+.work__major {
+  font-size: var(--font-small);
+}
+
+.univ__period,
+.work__period {
+  font-size: var(--font-micro);
 }

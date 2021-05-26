@@ -21,11 +21,11 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-  <h1>Heading1</h1>
-  <h2>Heading2</h2>
-  <h3>Heading3</h3> 
+    <h1>Heading1</h1>
+    <h2>Heading2</h2>
+    <h3>Heading3</h3>
 
-  <p>Paragraph</p>
+    <p>Paragraph</p>
     <!--navbar-->
     <nav id="navbar">
       <div class="navbar__logo">
@@ -59,26 +59,68 @@
     </section>
 
     <!--about-->
-    <section id="about">
+    <section id="about" class="section">
       <h1>About me</h1>
       <p>Hello My name is Heath Chnag</p>
+
       <div class="about__majors">
-        <div class="major_icon"><i class="fab fa-html5"></i></div>
-        <div class="major_title">Front-end</div>
-        <div class="major_description">HTML,CSS,JavaScript</div>
-      </div>
-      <div class="about__majors">
-        <div class="major_icon"><i class="fas fa-server"></i></div>
-        <div class="major_title">Back-end</div>
-        <div class="major_description">Java, JavaScript, Servlet</div>
-      </div>
-      <div class="about__jobs">
-        <div class="job">
-          <div class="major_icon"><i class="fas fa-university"></i>          
-          <p class="job__name">상명대학교</p>
-          <p class="job__period">13.03~ 20.02</p>
+        <div class="major">
+          <div class="major_icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h2 class="major_title">Front-end</h2>
+          <div class="major_description">HTML,CSS,JavaScript</div>
         </div>
-      </div>2
+
+        <div class="major">
+          <div class="major_icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h2 class="major_title">Back-end</h2>
+          <div class="major_description">Java, JavaScript, Servlet</div>
+        </div>
+
+        <div class="major">
+          <div class="major_icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h2 class="major_title">Database</h2>
+          <div class="major_description">OracleDB, MySQL</div>
+        </div>
+      </div>
+
+      <div class="about_place">
+        <div class="univ">
+          <img
+            src="imgs/place/univLogo.png"
+            alt="SangMyung"
+            class="univ__logo"
+          />
+          <div class="univ_description">
+            <p class="univ__name">상명대학교</p>
+            <p class="univ__major">
+              주 전공: 경제금융학부 <br />
+              연계전공: 데이터사이언스과학
+            </p>
+            <p class="univ__period">
+              FROM: 13.03 <br />
+              TO: 20.02
+            </p>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="imgs/place/workLogo.jpg" alt="Ubits" class="work__logo" />
+          <div class="work_description">
+            <p class="work__name">유비츠</p>
+            <p class="work__major">OB맥주 IT서비스데스크</p>
+            <p class="work__period">
+              FROM: 15.02 <br />
+              TO: 15.07
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--Skills-->
@@ -86,69 +128,70 @@
       <h1>Skills</h1>
       <h2>Skills & Attributes</h2>
       <p>
-        Passion for learning new technologies. Capable of woring within a team environment and independently.
-        Ability to plan and time schedule, work under strict time pressure and adapt quickly when needed.
+        Passion for learning new technologies. Capable of woring within a team
+        environment and independently. Ability to plan and time schedule, work
+        under strict time pressure and adapt quickly when needed.
       </p>
-    <div class="skillset">
-      <div class="skillset_left">
-        <h3 class="skillset_title">Skills</h3>
-        <div class="skill">
-          <div class="skill_description">
-            <span>JAVA</span>
-            <span>70%</span>
-          </div>
-          <div class="skill_description">
-            <span>JSP</span>
-            <span>50%</span>
-          </div>
-          <div class="skill_description">
-            <span>jQuery</span>
-            <span>50%</span>
-          </div>
-          <div class="skill_description">
-            <span>HTML/CSS</span>
-            <span>40%</span>
-          </div>
-          <div class="skill_description">
-            <span>JS</span>
-            <span>50%</span>
-          </div>
-          <div class="skill_description">
-            <span>SQL</span>
-            <span>70%</span>
-          </div>
-          <div class="skill_description">
-            <span>Python_Data Crawling</span>
-            <span>50%</span>
-          </div>
+      <div class="skillset">
+        <div class="skillset_left">
+          <h3 class="skillset_title">Skills</h3>
+          <div class="skill">
+            <div class="skill_description">
+              <span>JAVA</span>
+              <span>70%</span>
+            </div>
+            <div class="skill_description">
+              <span>JSP</span>
+              <span>50%</span>
+            </div>
+            <div class="skill_description">
+              <span>jQuery</span>
+              <span>50%</span>
+            </div>
+            <div class="skill_description">
+              <span>HTML/CSS</span>
+              <span>40%</span>
+            </div>
+            <div class="skill_description">
+              <span>JS</span>
+              <span>50%</span>
+            </div>
+            <div class="skill_description">
+              <span>SQL</span>
+              <span>70%</span>
+            </div>
+            <div class="skill_description">
+              <span>Python_Data Crawling</span>
+              <span>50%</span>
+            </div>
 
-          <div class="skill_bar">
-            <div class="skill_value"></div>
+            <div class="skill_bar">
+              <div class="skill_value"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skillset_right">
+          <div class="tools">
+            <h3 class="skillset_title">Tools</h3>
+            <ul class="tools_list">
+              <li><span>Eclipse</span></li>
+              <li><span>Visual Studio Code</span></li>
+              <li><span>Git & GitHub</span></li>
+              <li><span>Oracle SQL</span></li>
+            </ul>
+          </div>
+          <div class="etc">
+            <h3 class="skillset_title">etc</h3>
+            <ul class="etc_list">
+              <li><span>Microsoft Office Master</span></li>
+              <li>
+                <span>Advanced Data Analytics Semi-Professional (ADsP)</span>
+              </li>
+              <li><span>Korean & English & Vietnamese</span></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="skillset_right">
-      <div class="tools">
-        <h3 class="skillset_title">Tools</h3>
-        <ul class="tools_list">
-          <li><span>Eclipse</span></li>
-          <li><span>Visual Studio Code</span></li>
-          <li><span>Git & GitHub</span></li>
-          <li><span>Oracle SQL</span></li>
-        </ul>
-      </div>
-      <div class="etc">
-        <h3 class="skillset_title">etc</h3>
-        <ul class="etc_list">
-          <li><span>Microsoft Office Master</span></li>
-          <li><span>Advanced Data Analytics Semi-Professional (ADsP)</span></li>
-          <li><span>Korean & English & Vietnamese</span></li>
-
-        </ul>
-      </div>
-      </div>
-    </div>
-    
     </section>
 
     <!--work-->
@@ -156,48 +199,64 @@
       <h1>My Work</h1>
       <h3>Projects</h3>
       <div class="work_categories">
-        <button class="category__btn">ALL <span class="category_count">4</span></button>
-        <button class="category__btn">FRONT-end<span class="category_count">2</span></button>
-        <button class="category__btn">BACK-end<span class="category_count">2</span></button>
-      
+        <button class="category__btn">
+          ALL <span class="category_count">4</span>
+        </button>
+        <button class="category__btn">
+          FRONT-end<span class="category_count">2</span>
+        </button>
+        <button class="category__btn">
+          BACK-end<span class="category_count">2</span>
+        </button>
       </div>
 
       <div class="work_projects">
-        <a href="https://github.com/HeathChang/Acorn_class/tree/main/Projects/ShopMiniMall" class="shopping_mall" target="blank">
-        <img class="project_img" src="imgs/projects/shoppingMall.png" alt="shopping_mall"> 
-        <div class="project_description">
-          <h3> Shopping Mall</h3>
-          <span>My first web project</span>
-        </div>
+        <a
+          href="https://github.com/HeathChang/Acorn_class/tree/main/Projects/ShopMiniMall"
+          class="shopping_mall"
+          target="blank"
+        >
+          <img
+            class="project_img"
+            src="imgs/projects/shoppingMall.png"
+            alt="shopping_mall"
+          />
+          <div class="project_description">
+            <h3>Shopping Mall</h3>
+            <span>My first web project</span>
+          </div>
         </a>
       </div>
     </section>
 
     <!--testimonials-->
     <section id="testimonials">
-    <h1>Testimonials</h1>
-    <h3>See what they say about me</h3>
-    <div class="testimonials">
-      <div class="testimonial">
-        <img src="imgs/testimonial/people1.jpg" alt="people" class="testimonial_avartar">
-        <div class="testimonial_speachBubble">
-          <p>
-            Hello :)
-          </p>
-          <p class="name"><a href="">His name</a>/Place he works</p>
+      <h1>Testimonials</h1>
+      <h3>See what they say about me</h3>
+      <div class="testimonials">
+        <div class="testimonial">
+          <img
+            src="imgs/testimonial/people1.jpg"
+            alt="people"
+            class="testimonial_avartar"
+          />
+          <div class="testimonial_speachBubble">
+            <p>Hello :)</p>
+            <p class="name"><a href="">His name</a>/Place he works</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img
+            src="imgs/testimonial/people1.jpg"
+            alt="people"
+            class="testimonial_avartar"
+          />
+          <div class="testimonial_speachBubble">
+            <p>Hello :)</p>
+            <p class="name"><a href="">His name</a>/Place he works</p>
+          </div>
         </div>
       </div>
-      <div class="testimonial">
-        <img src="imgs/testimonial/people1.jpg" alt="people" class="testimonial_avartar">
-        <div class="testimonial_speachBubble">
-          <p>
-            Hello :)
-          </p>
-          <p class="name"><a href="">His name</a>/Place he works</p>
-        </div>
-      </div>
-    </div>
-    
     </section>
 
     <!--contact-->
@@ -212,7 +271,9 @@
           <i class="fab fa-blogger"></i>
         </a>
       </div>
-      <p class="contatc_rights">Copyrightⓒ2021 HeathChang All rights reserved.</p>
+      <p class="contatc_rights">
+        Copyrightⓒ2021 HeathChang All rights reserved.
+      </p>
     </section>
   </body>
 </html>
