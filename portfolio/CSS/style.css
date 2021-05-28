@@ -239,8 +239,8 @@ p {
   align-items: center;
   justify-content: space-between;
 }
-.univ,
-.work {
+.univPlace,
+.workPlace {
   display: flex;
   align-items: center;
 }
@@ -318,4 +318,104 @@ p {
 .tools,
 .etc {
   padding: 20px;
+}
+
+/* Work */
+.work {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+  max-width: 1200px;
+}
+.work_categories {
+  margin: 40px;
+}
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: 4px;
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-sky-blue);
+  color: var(--color-white);
+}
+.category__btn.activecategory_count,
+.category__btn:hover .category_count {
+  opacity: 1;
+  top: 0;
+}
+
+.category_count {
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+  color: var(--color-black);
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  line-height: 24px;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation--duration) ease-in;
+}
+
+.work_projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  position: relative;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+  justify-content: center;
+  align-items: center;
+}
+
+.project_img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 280px;
+  height: 250px;
+  border-color: #000000 solid;
+}
+.project_description {
+  position: absolute;
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  left: 0;
+  opacity: 0;
+  transition: var(--animation--duration) ease-in;
+  transform: translateY(10px);
+}
+.project:hover .project_description {
+  opacity: 0.85;
+  transform: translateY(10px);
+}
+
+.project_description h3 {
+  color: var(--color-white);
+}
+
+.project_description h3:after {
+  content: "";
+  display: block;
+  left: 50%;
+  width: 25px;
+  height: 2px;
+  margin-left: -12px;
+  margin-top: 8px;
+  background-color: var(--color-dark-white);
+  position: relative;
 }
