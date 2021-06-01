@@ -468,3 +468,36 @@ p {
 .testimonial_speachBubble a {
   color: var(--color-black);
 }
+
+/* Contacts */
+#contact {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+  max-width: 1200px;
+}
+
+#contact {
+  background-color: var(--color-sky-blue);
+}
+
+.contact_title,
+.contact_email,
+.contatc_rights {
+  color: var(--color-white);
+}
+
+.contact_title {
+  margin: 32px 0;
+}
+
+.contact_links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact_links i:hover {
+  transform: scale(1.1);
+  color: var(--color-dark-blue);
+  transition: all var(--animation--duration) ease;
+}
