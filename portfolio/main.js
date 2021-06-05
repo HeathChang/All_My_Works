@@ -20,7 +20,22 @@ navbarMenu.addEventListener('click',()=>{
   if(link == null) {
     return;
   }
-  console.log(event.target.dataset.link); //target-> li값 & dataset dom && link : value
-  const scrollTo=document.querySelector(link);
-  scrollTo.scrollIntoView({behavior:'smooth'});
+  scrollIntoView(event.target.dataset.link); //함수화
+  //console.log(event.target.dataset.link); //target-> li값 & dataset dom && link : value
+  //const scrollTo=document.querySelector(link); //링크 쿼리를 가져와라
+  //scrollTo.scrollIntoView({behavior:'smooth'});
 })
+
+//Handle click on "Contact me" button
+const contactBtn = document.querySelector('.home__contact');
+contactBtn.addEventListener('click',()=>{
+  scrollIntoView(event.target.dataset.link); //함수화
+  //const contactLink = event.target.dataset.link
+  //console.log(contactLink);
+  //document.querySelector(contactLink).scrollIntoView({behavior:'smooth'});
+})
+
+function scrollIntoView(selector){
+  const scrollInto= document.querySelector(selector);
+  scrollInto.scrollIntoView({behavior:'smooth'})
+}
