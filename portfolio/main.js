@@ -11,3 +11,16 @@ document.addEventListener('scroll',()=>{
   }
 
 })
+
+//Handle Scrolling when tapping on the navbar menu
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click',()=>{
+  const target= event.target;
+  const link =target.dataset.link
+  if(link == null) {
+    return;
+  }
+  console.log(event.target.dataset.link); //target-> li값 & dataset dom && link : value
+  const scrollTo=document.querySelector(link);
+  scrollTo.scrollIntoView({behavior:'smooth'});
+})
