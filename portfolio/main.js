@@ -10,20 +10,29 @@ document.addEventListener('scroll',()=>{
     navbar.classList.remove('navbar--dark');
   }
 
-})
+});
+
+
 
 //Handle Scrolling when tapping on the navbar menu
-const navbarMenu = document.querySelector('.navbar__menu');
+const navbarMenu= document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click',()=>{
   const target= event.target;
   const link =target.dataset.link
   if(link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(event.target.dataset.link); //함수화
   //console.log(event.target.dataset.link); //target-> li값 & dataset dom && link : value
   //const scrollTo=document.querySelector(link); //링크 쿼리를 가져와라
   //scrollTo.scrollIntoView({behavior:'smooth'});
+})
+
+//Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
+navbarToggleBtn.addEventListener('click',()=>{
+  navbarMenu.classList.toggle('open');
 })
 
 //Handle click on "Contact me" button
