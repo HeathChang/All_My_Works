@@ -383,8 +383,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: var(--animation--duration) ease-out;
 }
-
+.work_projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
+}
 .project {
   position: relative;
   width: 280px;
@@ -393,6 +398,10 @@ p {
   background-color: var(--color-light-white);
   justify-content: center;
   align-items: center;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project_img {

@@ -53,9 +53,35 @@ document.addEventListener('scroll',()=>{
 })
 
 //Handle Click on the "arrow up" btn
-
 arrowUp.addEventListener('click',()=>{
   scrollIntoView("#home");
+})
+
+
+
+
+//Projects
+const workBtnContainer=document.querySelector('.work_categories');
+const projectContainer=document.querySelector('.work_projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click',(event)=>{
+  const filter = event.target.dataset.filter||event.target.parentNode.dataset.filter;
+  if(filter==null){
+    return;
+  }
+  projectContainer.classList.add('anim-out');
+
+  setTimeout(()=>{
+    projects.forEach((project)=>{
+      if(filter==="*"||filter===project.dataset.type){
+        project.classList.remove('invisible');
+      }else{
+        project.classList.add('invisible');
+      }
+  })
+    projectContainer.classList.remove('anim-out');
+
+  },300);
 })
 
 /////////////Utility 함수/////////////
